@@ -1,0 +1,14 @@
+volumes:
+  data:
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: "db"
+      POSTGRES_USER: "postgresHomework7"
+      POSTGRES_PASSWORD: "postgresHomework7"
+    ports:
+      - "5432:5432"
+    volumes:
+      - data:/var/lib/postgresql
